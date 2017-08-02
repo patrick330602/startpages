@@ -21,17 +21,25 @@ body {
 header {
     opacity: 0.8;
 }
+
+header img {
+    margin: 0px auto;
+    display: block;
+}
+
+
 /* social */
 
-.social{
+.social {
     text-align: center;
     margin: 0 0 5px 10px;
 }
 
-.social div{
+.social div {
     display: inline;
     padding: 10px;
 }
+
 .social a {
     color: #fff;
     font-size: 20px;
@@ -61,6 +69,7 @@ header {
     -moz-transform: scaleX(1);
     transform: scaleX(1);
 }
+
 
 /* navigation */
 
@@ -114,6 +123,7 @@ nav a:hover:before {
     transform: scaleX(1);
 }
 
+
 /* footer */
 
 footer {
@@ -133,7 +143,6 @@ footer {
 @media screen and (max-width: 800px) {
     body {
         background-position: center top;
-        
     }
     .content {
         top: 5%;

@@ -6,13 +6,13 @@ body {
 
 .content {
     position: absolute;
-    top: 45%;
+    top: 35%;
     left: 0;
     right: 0;
     margin-left: auto;
     margin-right: auto;
     width: 700px;
-    height: 55%;
+    height: 65%;
 }
 
 

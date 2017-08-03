@@ -32,7 +32,7 @@ header img {
 
 .social {
     text-align: center;
-    margin: 0 0 5px 10px;
+    margin: 0 10px;
 }
 
 .social div {
@@ -166,7 +166,7 @@ footer {
 
 /* animation */
 
-#fade_in {
+.fade_in {
     -webkit-animation: fadein 2s;
     -moz-animation: fadein 2s;
     -ms-animation: fadein 2s;

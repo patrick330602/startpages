@@ -6,13 +6,13 @@ body {
 
 .content {
     position: absolute;
-    top: 35%;
+    top: 25%;
     left: 0;
     right: 0;
     margin-left: auto;
     margin-right: auto;
     width: 700px;
-    height: 65%;
+    height: 75%;
 }
 
 
@@ -20,6 +20,28 @@ body {
 
 header {
     opacity: 0.8;
+    -webkit-transition: opacity 0.2s ease-in-out 0s;
+    -moz-transition: opacity 0.2s ease-in-out 0s;
+    transition: opacity 0.2s ease-in-out 0s;
+}
+
+header:hover {
+    opacity: 1;
+}
+
+header:before {
+    -webkit-transform: scaleX(0);
+    -moz-transform: scaleX(0);
+    transform: scaleX(0);
+    -webkit-transition: all 0.2s ease-in-out 0s;
+    -moz-transition: all 0.2s ease-in-out 0s;
+    transition: all 0.2s ease-in-out 0s;
+}
+
+header:hover:before {
+    -webkit-transform: scaleX(1);
+    -moz-transform: scaleX(1);
+    transform: scaleX(1);
 }
 
 header img {

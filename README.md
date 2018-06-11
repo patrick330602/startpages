@@ -10,3 +10,9 @@
 ## legacy branch
 
 `legacy` branch is the old main site; for the current main site, please visit [here](https://patrickwu.ml/) or its repo [here](https://github.com/patrick330602/patrick330602.github.io).
+
+## Credit && License
+
+Thanks for people in [/r/startpages](https://reddit.com/r/startpages/) to inspire me with lots of ideas! 
+
+And I am lazy, so it's using MIT License.

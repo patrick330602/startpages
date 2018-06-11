@@ -1,0 +1,169 @@
+@font-face {
+	font-family: 'RobotoMono-Light';
+	src: url('RobotoMono-Light.ttf') format('truetype');
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+	background-color: #282a36;
+	color: #FFFFFF;
+	font-size: 14px;
+	font-family: 'RobotoMono-Light', sans-serif;
+}
+
+#container {
+	position: absolute;
+	top: 25%;
+	left: 0;
+	right: 0;
+	margin-left: auto;
+	margin-right: auto;
+	width: 700px;
+	height: auto;
+}
+
+h3 {
+	padding-bottom: 5px;
+}
+
+a {
+	display: inline;
+	text-decoration: none;
+	font-weight: bold;
+}
+
+a.cyan:hover {
+	color: #4babdb;
+	text-decoration: underline;
+}
+
+a.white:hover {
+	color: #aaaaaa;
+	text-decoration: underline;
+}
+
+a.red:hover {
+	color: #ff5c57;
+	text-decoration: underline;
+}
+
+h3 {
+	font-size: 14px;
+	padding-bottom: 0;
+	margin-bottom: 0;
+	margin-top: 0;
+}
+
+.cyan {
+	color: #9aedfe;
+	padding: 0;
+}
+
+.blue {
+	color: #57c7ff;
+	padding: 0;
+}
+
+.green {
+	padding: 0;
+	color: #5af78e;
+}
+
+.pink {
+	padding: 0;
+	color: #ff6ac1;
+}
+
+.red {
+	padding: 0;
+	color: #ff5c57;
+}
+
+.gray {
+	padding: 0;
+	color: #282a36;
+}
+
+.yellow {
+	padding: 0;
+	color: #eae434;
+}
+
+.white {
+	padding: 0;
+	color: #FFFFFF;
+}
+
+form {
+	display: inline;
+}
+
+input {
+	display: inline;
+	background: none;
+	font-family: 'RobotoMono-Light', sans-serif;
+	font-size: 14px;
+	background-color: rgba(0, 0, 0, 0);
+	color: #5af78e;
+	border: none;
+	outline: none;
+	transition: height 1s;
+	-webkit-transition: height 1s;
+}
+
+.control-item {
+	width: 25px;
+	height: 25px;
+	text-align: center;
+	color: #333;
+	-webkit-transition: all ease-in 0.15s;
+	transition: all ease-in 0.15s;
+	cursor: pointer;
+}
+
+.control-item:hover {
+	background-color: #ccc;
+}
+
+.control-item.control-close {
+	font-family: inherit;
+	font-size: 20px;
+	font-weight: 500;
+	line-height: 30px;
+}
+
+.control-item.control-close:hover {
+	background-color: #ec6060;
+	color: #fff;
+}
+
+.control-item.control-maximize {
+	line-height: 19px;
+}
+
+.control-item.control-minimize {
+	line-height: 22px;
+}
+
+@media screen and (max-width: 800px) {
+	body {
+		background-attachment: fixed;
+	}
+	#container {
+		position: absolute;
+		padding: 0;
+		top: 10px;
+		left: 10px;
+		right: 10px;
+		margin-left: auto;
+		margin-right: auto;
+		width: 100%;
+		height: auto;
+	}
+	#links {
+		display: inherit;
+		width: 100%;
+	}
+}

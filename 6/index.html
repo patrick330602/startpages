@@ -1,0 +1,180 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Strict//EN">
+<html>
+
+<head>
+    <title>面 · INTERFACE</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="css/font-awesome.min.css" />
+    <script src="quotes.js"></script>
+    <script>
+        function handle(e) {
+            if (e.keyCode === 13) {
+                e.preventDefault(); // Otherwise the form will be submitted
+                var query = document.getElementById('inputbox').value;
+                provider = query.split(" ")[0];
+                var search = query.split(" ").splice(1).join(" ");
+                switch (provider) {
+                    // YouTube
+                    case "locate":
+                        window.location.href = "https://www.google.com/search?q=" + search;
+                        break;
+                    case "china":
+                        window.location.href = "https://www.baidu.com/s?wd=" + search;
+                        break;
+                    case "/r":
+                        window.location.href = "https://www.reddit.com/r/" + search;
+                        break;
+                    case "man":
+                        window.location.href = "https://tldr.ostera.io/" + query;
+                    default:
+                        window.location.href = "https://www.google.com/search?q=" + query;
+                }
+            }
+        }
+
+        function WhichBrowser() {
+            // Opera 8.0+
+            var isOpera = (!!window.opr && !!opr.addons) || !!window.opera || navigator.userAgent.indexOf(' OPR/') >= 0;
+
+            // Firefox 1.0+
+            var isFirefox = typeof InstallTrigger !== 'undefined';
+
+            // Safari 3.0+ "[object HTMLElementConstructor]"
+            var isSafari = Object.prototype.toString.call(window.HTMLElement).indexOf('Constructor') > 0 || (function (
+                p) {
+                return p.toString() === "[object SafariRemoteNotification]";
+            })(!window['safari'] || safari.pushNotification);
+
+            // Internet Explorer 6-11
+            var isIE = /*@cc_on!@*/ false || !!document.documentMode;
+
+            // Edge 20+
+            var isEdge = !isIE && !!window.StyleMedia;
+
+            // Chrome 1+
+            var isChrome = !!window.chrome && !!window.chrome.webstore;
+
+            var data = isOpera ? 'opera' :
+                isFirefox ? 'firefox' :
+                isSafari ? 'safari' :
+                isChrome ? 'chrome' :
+                isIE ? 'ie' :
+                isEdge ? 'edge' :
+                "internet";
+            document.getElementById('brow').innerHTML = data;
+            document.getElementById('brow_q').innerHTML = data;
+            document.getElementById('brow1').innerHTML = data;
+            document.getElementById('brow2').innerHTML = data;
+            document.getElementById('brow3').innerHTML = data;
+            document.getElementById('brow4').innerHTML = data;
+            document.getElementById('brow5').innerHTML = data;
+            document.getElementById('brow6').innerHTML = data;
+            document.getElementById('brow_e').innerHTML = data;
+
+
+        };
+
+        function checkTime(i) {
+            return (i < 10) ? "0" + i : i;
+        }
+
+        function startTime() {
+            var today = new Date(),
+                h = checkTime(today.getHours()),
+                m = checkTime(today.getMinutes()),
+                s = checkTime(today.getSeconds());
+            document.getElementById('time').innerHTML = h + ":" + m + ":" + s;
+            t = setTimeout(function () {
+                startTime()
+            }, 500);
+        }
+
+        function site_init() {
+            startTime();
+            WhichBrowser();
+        }
+    </script>
+</head>
+
+<body onload="site_init();quote_of_the_day();">
+    <div id="container">
+        <h3 style="display: inline;"><span class="green">patrick@</span><span class="green" id="brow"></span>:<span class="blue">~</span>$ <span class="green">date</span>            +%T<br/><span id="time"></span> </h3><br/>
+        <h3 style="display: inline;"><span class="green">patrick@</span><span class="green" id="brow_q"></span>:<span class="blue">~</span>$ <span class="green">quote_of_the_day</span><br/>
+            <span
+                id="quote"></span>
+        </h3>
+        <h3><span class="green">patrick@</span><span class="green" id="brow1"></span>:<span class="blue">~</span>$ <span class="green">ls</span>            freq</h3>
+        <a class="white" href="https://www.bilibili.com/">bilibili</a>
+        <a class="white" href="http://45.32.12.116/user">blackbeard</a>
+        <a class="white" href="https://www.facebook.com/">facebook</a>
+        <a class="white" href="http://github.com/patrick330602">github</a>
+        <a class="white" href="https://www.linkedin.com/">linkedin</a>
+        <a class="white" href="http://www.reddit.com/">reddit</a>
+        <a class="cyan" href="https://patrickwu.ml/">wm</a>
+        <a class="white" href="https://xkcd.com/">xkcd</a>
+        <a class="white" href="https://youtube.com/">youtube</a>
+        <a class="white" href="http://127.0.0.1:43110/">zeronet</a>
+        <h3><span class="green">patrick@</span><span class="green" id="brow2"></span>:<span class="blue">~</span>$ <span class="green">ls</span>            resources</h3>
+        <a class="white" href="https://unsplash.com">unsplash</a>
+        <a class="white" href="http://ctext.org/">ctp</a>
+        <a class="cyan" href="http://www.cdbao.net/portal.php">cdbao</a>
+        <a class="white" href="https://www.shanbay.com/">shanbay</a>
+        <a class="white" href="http://www.planetebook.com/">planetebook</a>
+        <a class="white" href="https://www.videezy.com/browse">videezy</a>
+        <a class="white" href="http://gutenberg.net.au/">pga</a>
+        <a class="white" href="https://cloudconvert.com/">cloudconvert</a>
+        <h3><span class="green">patrick@</span><span class="green" id="brow3"></span>:<span class="blue">~</span>$ <span class="green">ls</span>            cse</h3>
+        <a class="white" href="https://course.cse.ust.hk/cass">cass</a>
+        <a class="white" href="https://csservice.cse.ust.hk/prereg/">ccp-e</a>
+        <a class="cyan" href="https://course.cse.ust.hk/comp2011/">comp2011</a>
+        <a class="cyan" href="https://course.cse.ust.hk/comp2012/">comp2012</a>
+        <a class="cyan" href="https://course.cse.ust.hk/comp2021/">comp2021</a>
+        <a class="cyan" href="https://course.cse.ust.hk/comp2611/">comp2611</a>
+        <a class="cyan" href="https://course.cse.ust.hk/comp3111/">comp3111</a>
+        <a class="cyan" href="https://course.cse.ust.hk/comp3511/">comp3511</a>
+        <a class="cyan" href="http://www.cse.ust.hk/ug/comp4900/">comp4900</a>
+        <a class="white" href="https://e-advising1.seng.ust.hk/cgi-bin/student.php">engg-adv</a>
+        <a class="white" href="https://e5.onthehub.com/WebStore/ProductsByMajorVersionList.aspx?cmi_cs=1&cmi_mnuMain=bdba23cf-e05e-e011-971f-0030487d8897&ws=a4e769a7-5b9b-e011-969d-0030487d8897&vsro=8">imagine@cse</a>
+        <h3><span class="green">patrick@</span><span class="green" id="brow4"></span>:<span class="blue">~</span>$ <span class="green">ls</span>            dev</h3>
+        <a class="cyan" href="#">cssahk</a>
+        <a class="white" href="https://www.cloudflare.com/a/overview/">cloudflare</a>
+        <a class="white" href="https://my.freenom.com/clientarea.php?action=domaindetails&id=1012874814">freenom</a>
+        <a class="cyan" href="#">hkciea</a>
+        <a class="white" href="http://www.dreamspark.com/">imagine</a>
+        <a class="red" href="http://localhost:4000/">localhost:4000</a>
+        <a class="white" href="https://dev.windows.com/en-us/overview?from=UHF">msdb</a>
+        <a class="cyan" href="#">msss_cssahk</a>
+        <a class="cyan" href="#">msss_wp</a>
+        <a class="cyan" href="#">msss_forum</a>
+	<a class="white" href="https://console.cloud.tencent.com/">qcloud</a>
+	<a class="white" href="https://console.cloud.google.com/">gcloud</a>
+	<a class="white" href="https://app.netlify.com/">netlify</a>
+        <h3><span class="green">patrick@</span><span class="green" id="brow5"></span>:<span class="blue">~</span>$ <span class="green">ls</span>            hkust</h3>
+        <a class="white" href="http://canvas.ust.hk/">canvas</a>
+        <a class="cyan" href="http://ihome.ust.hk/~jwuau/my_course">course</a>
+        <!--<a class="red" href="http://www.clarityenglish.com/area1/RoadToIELTS2/Start-AC.php?prefix=HKUST">ielts.ust</a>-->
+        <a class="white" href="http://library.ust.hk/">library</a>
+        <a class="white" href="http://my.ust.hk/">my_portal</a>
+        <a class="white" href="https://mystudyabroad.ust.hk/">mystudyaborad</a>
+        <a class="red" href="http://pathadvisor.ust.hk/">pathfdr</a>
+        <a class="white" href="http://redbird.ust.hk/">redbird</a>
+        <a class="white" href="https://sisprod.psft.ust.hk/psp/SISPROD/EMPLOYEE/HRMS/c/SA_LEARNER_SERVICES.SSS_STUDENT_CENTER.GBL?pslnkid=Z_HC_SSS_STUDENT_CENTER_LNK&FolderPath=PORTAL_ROOT_OBJECT.Z_HC_SSS_STUDENT_CENTER_LNK&IsFolder=false&IgnoreParamTempl=FolderPath%2cIsFolder">student_center</a>
+        <a class="red" href="https://turnitin.com/s_home.asp?login=1&svr=06&lang=en_us&r=38.5252598325593">turnitin</a>
+        <a class="red" href="http://ust.space/">ust.space</a>
+        <h3><span class="green">patrick@</span><span class="green" id="brow6"></span>:<span class="blue">~</span>$ <span class="green">ls</span>            mst</h3>
+        <a class="white" href="https://mst.instructure.com/">canvas</a>
+        <a class="white" href="http://joess.mst.edu/">joess</a>
+        <a class="white" href="https://mst.studenthealthportal.com/">health_portal</a>
+        <a class="white" href="https://thd.mst.edu/thdssmst/">housing</a>
+        <a class="cyan" href="https://hurson.weebly.com/cs-2300-file-organization--intro-to-data-base-management-systems.html">cs2300</a>
+        <a class="cyan" href="http://web.mst.edu/~ricardom/CS3500/18.1/">cs3500</a>
+        <br/>
+        <h3 style="display: inline;"><span class="green">patrick@</span><span class="green" id="brow_e"></span>:<span class="blue">~</span>$
+            <input type="text" id="inputbox" autofocus onkeypress="handle(event)" \>
+        </h3>
+    </div>
+</body>
+
+</html>
